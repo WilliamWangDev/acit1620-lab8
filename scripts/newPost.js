@@ -8,7 +8,7 @@ async function addPost(post) {
      */
 
     // Your code here
-    const postsString = localStorage.getItem('posts') ?? [];
+    const postsString = localStorage.getItem('posts') ?? "[]";
     const posts = JSON.parse(postsString);
     posts.unshift(post);
     localStorage.setItem('posts', JSON.stringify(posts));
